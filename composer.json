@@ -1,0 +1,18 @@
+{
+    "require": {
+        "cweagans/composer-patches": "^1.7",
+        "interconnectit/search-replace-db": "^4.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "cweagans/composer-patches": true
+        }
+    },
+    "extra": {
+      "patches": {
+        "interconnectit/search-replace-db": {
+          "Fix for property with asterisk": "patches/search-replace-db/fix-for-property-with-asterisk.patch"
+        }
+      }
+    }
+}

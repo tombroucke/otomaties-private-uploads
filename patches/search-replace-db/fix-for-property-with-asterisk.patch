@@ -1,0 +1,10 @@
+--- search-replace-db/srdb.class.php	2023-03-29 11:52:34
++++ search-replace-db/srdb.class-patched.php	2023-03-29 11:59:02
+@@ -844,6 +844,7 @@
+                 $_tmp  = $data;
+                 $props = get_object_vars( $data );
+                 foreach ( $props as $key => $value ) {
++                    $key = trim( $key );
+                     $_tmp->$key = $this->recursive_unserialize_replace( $from, $to, $value, false );
+                 }
+ 

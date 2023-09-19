@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Private uploads
  * Description:       Set a default plugin directory and add a .htaccess file to it. Add move-actions to uploads
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Tom Broucke
  * Author URI:        https://tombroucke.be
  * License:           GPL-2.0+

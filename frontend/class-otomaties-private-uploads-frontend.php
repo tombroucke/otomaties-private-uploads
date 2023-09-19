@@ -136,4 +136,14 @@ class Otomaties_Private_Uploads_Frontend {
 		return str_replace($upload_dir['baseurl'] . '/private-uploads/', home_url() . '/private-uploads?file=/', $url);
 	}
 
+	public function replace_private_file_url_in_prepare_attachment_for_js ($response, $attachment, $meta )
+	{
+		if (isset($response['sizes'])) {
+			foreach ($response['sizes'] as &$size) {
+				$size['url'] = $this->replace_private_file_url($size['url']);
+			}
+		}
+		return $response;
+	}
+
 }

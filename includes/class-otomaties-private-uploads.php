@@ -202,6 +202,7 @@ class Otomaties_Private_Uploads {
 		$this->loader->add_filter( 'wp_get_attachment_image_src', $plugin_frontend, 'replace_private_file_url', 10, 4);
 		$this->loader->add_filter( 'the_content', $plugin_frontend, 'replace_private_file_url', 10, 4);
 		$this->loader->add_filter( 'wp_get_attachment_url', $plugin_frontend, 'replace_private_file_url', 10, 2);
+		$this->loader->add_filter( 'wp_prepare_attachment_for_js', $plugin_frontend, 'replace_private_file_url_in_prepare_attachment_for_js', 10, 3);
 
 	}
 
